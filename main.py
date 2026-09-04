@@ -14,6 +14,7 @@ from handlers.search import router as search_router
 from handlers.staff import router as staff_router
 from handlers.admin import router as admin_router
 from handlers.ai_assistant import router as ai_router
+from style import *
 
 
 load_dotenv()
@@ -22,6 +23,8 @@ dp = Dispatcher()
 
 
 async def main():
+    print(lgreen + 'Bot started ..... ✔' + reset)
+    
     await init_tables()
     dp.include_router(start_router)
     dp.include_router(menu_router)
